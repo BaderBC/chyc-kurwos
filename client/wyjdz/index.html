@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang=pl>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" onsubmit='
+        const gdzieWychodzi = document.getElementById("gdzieWychodzi").value;
+        fetch("http://localhost:8080/wyjdz", {
+            "method": "POST",
+            "body": {
+                "gdzieWychodzi": gdzieWychodzi
+            }
+        });
+'>
+        <label>
+            <input type="text" placeholder="Gdzie wychodzisz" required id="gdzieWychodzi">
+        </label>
+            <input type="checkbox" required id="czyJestes">
+            <label for="czyJestes">na prawdę nazywam się Chyc-Kuros</label>
+        <input type="submit">
+    </form>
+</body>
+</html>

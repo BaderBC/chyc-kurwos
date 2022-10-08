@@ -11,7 +11,9 @@
     "mongoose": "^6.6.5"
   },
   "scripts": {
-    "start": "nodemon ."
+    "start": "node .",
+    "watch": "nodemon .",
+    "build": "yarn install"
   },
   "devDependencies": {}
 }

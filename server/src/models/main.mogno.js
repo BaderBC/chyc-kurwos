@@ -6,9 +6,10 @@ const mainSchema =  new mongoose.Schema({
         required: true,
     },
     date: {
-        type: Date,
+        type: Number,
         required: true,
         default: Date.now(),
+        unique: true
     }
 }, {
     collection: 'wyjscia'

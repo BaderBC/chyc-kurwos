@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 
 const WyjdzController = require('./controllers/wyjdz.controller');
+const HistoryController = require('./controllers/history.controller');
 
 
 app.use(express.static(path.join(__dirname,'..' , '..', 'client')));
@@ -13,6 +14,7 @@ app.use(express.urlencoded({
 
 
 app.use('/wyjdz', WyjdzController);
+app.use('/history', HistoryController);
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', '..', 'client', 'homepage', 'index.html'));

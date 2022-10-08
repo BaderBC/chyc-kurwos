@@ -12,8 +12,14 @@ Router.get('/', (req, res) => {
 Router.post('/', async (req, res) => {
     try {
         const query = JSON.parse(JSON.stringify(req.body));
+        console.table(query);
 
-        query.date = query.date ? new Date(query.date) : Date.now(); //TODO: query date validation;
+        if (typeof query.date === 'string') query.date =  Number(query.date);
+        if (typeof query.date !== "number" && query.date !== undefined) {
+            console.table(query);
+            throw new Error("lol");
+        }
+
         console.table(query);
 
         const newRecord = new mongoModel({
@@ -28,8 +34,8 @@ Router.post('/', async (req, res) => {
                 res.redirect('/');
             })
     } catch (err) {
-        console.error(err);
-        res.status(400).send({
+        //console.error(err);
+        await res.status(400).send({
             msg: err.message,
             ok: false
         })

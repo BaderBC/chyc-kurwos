@@ -8,20 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" onsubmit='
-        const gdzieWychodzi = document.getElementById("gdzieWychodzi").value;
-        fetch("http://localhost:8080/wyjdz", {
-            "method": "POST",
-            "body": {
-                "gdzieWychodzi": gdzieWychodzi
-            }
-        });
-'>
-        <label>
-            <input type="text" placeholder="Gdzie wychodzisz" required id="gdzieWychodzi">
-        </label>
-            <input type="checkbox" required id="czyJestes">
-            <label for="czyJestes">na prawdę nazywam się Chyc-Kuros</label>
+    <form method="post" action="/wyjdz">
+        <input name="whereIsPornol" type="text" placeholder="Gdzie wychodzisz" required id="whereIsPornol">
+        <input type="checkbox" required id="czyJestes">
+        <label for="czyJestes">na prawdę nazywam się Chyc-Kuros</label>
         <input type="submit">
     </form>
 </body>

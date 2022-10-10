@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mainSchema =  new mongoose.Schema({
+const MainSchema =  new mongoose.Schema({
     whereIsPornol: {
         type: String,
         required: true,
@@ -15,4 +15,4 @@ const mainSchema =  new mongoose.Schema({
     collection: 'wyjscia'
 })
 
-module.exports = mongoose.model('main', mainSchema);
+module.exports = mongoose.model('main', MainSchema);

@@ -5,7 +5,7 @@ const mongoModel = require('../models/main.mogno');
 
 Router.get('/', async (req, res) => {
     try {
-        const limit = req.query.limit
+        const { limit } = req.query;
         // if limit is undefined query will find all records
 
         await mongoModel
@@ -17,14 +17,14 @@ Router.get('/', async (req, res) => {
                 _id: false
             })
             .sort('-date')
-            .exec((err, response) => {
+            .exec((err, result) => {
                 if (err) throw err;
 
-                res.status(200).json(response);
+                res.status(200).json(result);
             });
     } catch (err) {
         console.error(err);
-        res.status(400).json({
+        res.status(500).json({
             error: err.message,
             ok: false
         });

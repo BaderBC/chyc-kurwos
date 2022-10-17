@@ -1,3 +1,5 @@
+const path = require('path');
+
 const express = require('express');
 const jwt = require('jsonwebtoken');
 
@@ -9,10 +11,14 @@ const AUTH_SECRET_KEY = process.env.AUTH_SECRET_KEY;
 
 
 
+Router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', '..', '..', 'client', 'auth', 'index.html'));
+});
+
 Router.post('/', (req, res) => {
     try {
-        const { id } = req.query || req.body;
-        console.log(id);
+        const { id } = req.body;
+        console.log(id, req.body);
 
         //TODO: check code bellow:
         authModel

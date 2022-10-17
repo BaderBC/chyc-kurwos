@@ -34,6 +34,7 @@ Router.post('/', verifyMiddleware, async (req, res) => {
             date: query.date
         })
 
+
         await newRecord
             .save()
             .then((data) => {

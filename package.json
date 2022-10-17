@@ -10,5 +10,9 @@
     "watch": "yarn --cwd server watch",
     "build": "yarn --cwd server build"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "helmet": "^6.0.0"
+  }
 }

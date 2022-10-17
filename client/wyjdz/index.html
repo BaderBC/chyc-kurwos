@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang=pl>
 <head>
+    <link rel="stylesheet" href="/wyjdz/style.css">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -8,11 +9,17 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="/wyjdz">
-        <input name="whereIsPornol" type="text" placeholder="Gdzie wychodzisz" required id="whereIsPornol">
-        <input type="checkbox" required id="czyJestes">
-        <label for="czyJestes">na prawdę nazywam się Chyc-Kuros</label>
-        <input type="submit">
-    </form>
+<script src="/wyjdz/index.js" defer></script>
+    <div id="form-div">
+        <form id="form" method="post" action="/wyjdz">
+            <input name="whereIsPornol" type="text" placeholder="Gdzie wychodzisz" required id="whereIsPornol">
+            <div>
+                <input type="checkbox" checked required id="czyJestes">
+                <label for="czyJestes">na prawdę nazywam się Chyc-Kuros</label>
+            </div>
+            <input id="jwt" type="text" required name="token" placeholder="token JWT" style="display: none;">
+            <input type="submit">
+        </form>
+    </div>
 </body>
 </html>

@@ -1,8 +1,11 @@
+const pageUrl = window.location.href;
+const authId = pageUrl.split('?').at(-1);
+
 let myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
 let urlencoded = new URLSearchParams();
-urlencoded.append("id", "test2136");
+urlencoded.append("id", authId);
 
 const requestOptions = {
     method: 'POST',
@@ -11,7 +14,7 @@ const requestOptions = {
     redirect: 'follow'
 };
 
-fetch("http://localhost:3000/auth", requestOptions)
+fetch("/auth", requestOptions)
     .then(response => response.json())
     .then(result => {
         localStorage.setItem('token', result.token);

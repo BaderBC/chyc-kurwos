@@ -16,22 +16,11 @@ Router.post('/', verifyMiddleware, async (req, res) => {
         const query = JSON.parse(JSON.stringify(req.body));
         console.table(query);
 
-        if (typeof query.date === 'string') query.date =  Number(query.date);
-        if (typeof query.date !== 'number' && query.date !== undefined) {
-            console.table(query);
-            return res
-                .status(400)
-                .json({
-                    msg: "ERROR: Invalid date format (date should be number)",
-                    ok: false
-                });
-        }
-
         console.table(query);
 
         const newRecord = new mongoModel({
             whereIsPornol: query.whereIsPornol,
-            date: query.date
+            date: Date.now()
         })
 
 
@@ -42,8 +31,8 @@ Router.post('/', verifyMiddleware, async (req, res) => {
                 res.redirect('/');
             })
     } catch (err) {
-        //console.error(err);
-        await res.status(500).send({
+        console.error(err);
+        res.status(500).send({
             msg: err.message,
             ok: false
         })

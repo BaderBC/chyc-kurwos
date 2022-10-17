@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 900px;
+    background: #FFF;
+    overflow-x: hidden !important;
+    background-image: url(tło.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 69;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 560px 20px 40px;
+    gap: 340px;
+    width: 100%;
+    height: 74px;
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 155px;
+    height: 34px;
+    background: #000000;
+}
+
+#title > p {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+#main-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 30px;
+    gap: 32px;
+    width: 254px;
+    height: 34px;
+    background: #000000;
+}
+
+#main-nav > p, a {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+#hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 0px 0px 120px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+#text-place {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 117px 32px 32px;
+    gap: 40px;
+    width: 630px;
+    height: 424px;
+    background: #000;
+    position: relative;
+    border: 24px solid white;
+}
+
+#text-place > p:first-of-type {
+    width: 581px;
+    height: 120px;
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 125%;
+    color: #FFFFFF;
+}
+
+#text-place > p {
+    width: 581px;
+    height: 20px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    color: #FFFFFF;
+}
+
+#imagery {
+    width: 516px;
+    height: 900px;
+}
+
+#big-img {
+    position: absolute;
+    width: 516px;
+    right: 0px;
+    top: 0px;
+    bottom: 207px;
+    background: linear-gradient(182.29deg, rgba(255, 255, 255, 0.33) 15.26%, rgba(255, 255, 255, 0) 35.17%, rgba(255, 255, 255, 0) 47.33%);
+    border: 26px solid #FFFFFF;
+}
+
+#small-img {
+    box-sizing: border-box;
+    position: absolute;
+    width: 376px;
+    height: 451px;
+    right: 26px;
+    bottom: 0px;
+    border-width: 32px 0px 0px 32px;
+    border-style: solid;
+    border-color: #FFFFFF;
+}
